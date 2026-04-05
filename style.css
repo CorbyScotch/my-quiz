@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --text-color: #333;
+  --secondary-color: #faf2e3;
+  --test-color: rgb(233, 109, 26);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(243, 232, 217);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  /* border: solid; */
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen {
+  display: none !important;
+}
+
+/* START SCREEN */
+.intro-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: solid; */
+  border-radius: 15px;
+  height: 250px;
+  width: 500px;
+  background-color: white;
+  gap: 25px;
+  box-shadow: 0 10px 25px rgba(53, 52, 54, 0.2);
+}
+
+.start-button {
+  color: white;
+  background-color: var(--test-color);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: rgb(225, 65, 25);
+}
+
+.intro-div h1 {
+  color: rgb(235, 100, 10);
+  font-size: 2.5rem;
+}
+
+.intro-div p {
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+/* QUESTIONS SCREEN */
+.questions-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: solid; */
+  border-radius: 15px;
+  height: 600px;
+  width: 500px;
+  background-color: white;
+  gap: 8px;
+  box-shadow: 0 10px 25px rgba(53, 52, 54, 0.2);
+}
+
+.questions-screen h2 {
+  text-align: center;
+  padding: 5px;
+}
+
+.tracker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 25px;
+}
+
+.answers-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.answers-div-button {
+  width: 450px;
+  height: 45px;
+  border-radius: 5px;
+  color: var(--text-color);
+  background-color: rgb(235, 221, 196);
+  border: 1px solid rgb(231, 164, 87);
+  transition: all 0.3s ease;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.answers-div button:hover {
+  background-color: rgb(248, 225, 182);
+}
+
+.progress-bar-container {
+  /* border: solid; */
+  height: 8px;
+  background-color: #f8e1b6;
+  width: 90%;
+  border-radius: 5px;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  /* display: none; */
+  width: 0px;
+  background-color: var(--test-color);
+  position: absolute;
+  border: solid var(--test-color);
+  border-radius: 5px;
+  margin-top: 1px;
+}
+
+/* FINAL PAGE */
+.result-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: solid; */
+  border-radius: 15px;
+  height: 300px;
+  width: 570px;
+  background-color: white;
+  gap: 15px;
+  box-shadow: 0 10px 25px rgba(53, 52, 54, 0.2);
+}
+
+.result-screen h1 {
+  color: var(--test-color);
+}
+
+.info {
+  width: 90%;
+  height: 110px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.info h3 {
+  color: var(--test-color);
+  font-size: 1.5rem;
+}
+
+.info p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.result-screen button {
+  color: white;
+  background-color: var(--test-color);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.result-screen button:hover {
+  background-color: rgb(228, 65, 25);
+}
+
+.correct-answer {
+  border: 1px solid rgb(62, 226, 62);
+  color: rgb(11, 177, 11);
+  background-color: rgb(236, 248, 233);
+}
+
+.wrong-answer {
+  border: 1px solid rgb(233, 24, 24);
+  color: rgb(243, 18, 18);
+  background-color: rgb(250, 235, 235);
+}
+
+@media (max-width: 480px) {
+  .intro-div h1 {
+    font-size: 2rem;
+  }
+  .intro-div p {
+    font-size: 0.8rem;
+  }
+  .start-button {
+    padding: 0.8rem 1.5rem;
+  }
+
+  /* QUESTIONS SCREEN */
+
+  .questions-screen {
+    height: 500px;
+    width: 300px;
+  }
+  .questions-screen h2 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .answers-div button {
+    width: 250px;
+    height: 40px;
+  }
+  .tracker {
+    font-size: 1rem;
+  }
+  .progress-bar-container {
+    width: 85%;
+  }
+}

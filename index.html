@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Brainiac-Sama" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="intro-div" id="intro-div">
+        <h1>Quiz Time!</h1>
+        <p>Test your knowledge with these fun questions</p>
+        <button class="start-button" id="start-button">Start Quiz</button>
+      </div>
+
+      <div class="questions-screen screen" id="questions-screen">
+        <h2 id="question">Questions</h2>
+        <div class="tracker" id="tracker">
+          <p class="question-number">
+            Question
+            <span class="current-question" id="current-question">0</span> of
+            <span class="total-questions" id="total-questions">5</span>
+          </p>
+          <p>Score: <span class="score-span" id="score-span">0</span></p>
+        </div>
+        <div class="answers-div" id="answers-div"></div>
+        <div class="progress-bar-container" id="progress-bar-container">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+      </div>
+
+      <div class="result-screen screen" id="result-screen">
+        <h1>Quiz Results</h1>
+        <div class="info">
+          <p>
+            You scored <span class="your-score" id="your-score">0</span> out of
+            <span class="total" id="total">5</span>
+          </p>
+          <h3 id="remark">Remarks</h3>
+        </div>
+        <button class="restart-button" id="restart-button">Restart Quiz</button>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
