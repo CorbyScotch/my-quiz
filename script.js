@@ -193,6 +193,12 @@ function showQuestion() {
         score++;
       } else {
         ansButton.classList.add("wrong-answer");
+        const correctButton = Array.from(answersContainer.children).find(
+          (button) => button.dataset.correct === "true",
+        );
+        if (correctButton) {
+          correctButton.classList.add("correct-answer");
+        }
       }
 
       scoring.textContent = score;

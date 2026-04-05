@@ -218,6 +218,7 @@ main {
   }
   .intro-div p {
     font-size: 0.8rem;
+    text-align: center;
   }
   .start-button {
     padding: 0.8rem 1.5rem;
@@ -242,5 +243,11 @@ main {
   }
   .progress-bar-container {
     width: 85%;
+  }
+}
+
+@media (max-width: 360px) {
+  .intro-div p {
+    text-align: center;
   }
 }
